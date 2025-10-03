@@ -6,8 +6,12 @@ const Hero = () => {
     document.getElementById('models')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -19,10 +23,10 @@ const Hero = () => {
       
       <div className="container relative z-10 px-4 py-20 mx-auto text-center">
         <h1 className="mb-6 text-5xl md:text-7xl font-bold text-white animate-fade-in">
-          Electric Mobility for Ethiopia
+          Ethiopian Electric Motorcycles
         </h1>
         <p className="mb-8 text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-          IFA Motors - Your trusted partner for premium electric motorcycles from ZP Motors
+          IFA Motors - Leading importer and assembler of premium ZP Motors electric motorcycles in Ethiopia
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
@@ -35,13 +39,14 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline"
+            onClick={scrollToContact}
             className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 font-semibold px-8 py-6 text-lg transition-all duration-300"
           >
             Contact Us
           </Button>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

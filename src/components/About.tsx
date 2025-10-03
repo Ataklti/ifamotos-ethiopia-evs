@@ -21,10 +21,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-20 bg-secondary" aria-labelledby="about-heading">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 id="about-heading" className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             About IFA Motors
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">

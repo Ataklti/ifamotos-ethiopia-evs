@@ -1,7 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import motorcycleDisplay from "@/assets/motorcycle-display.jpg";
+import zp990c from "@/assets/models/ZP990C.jpg";
+import zp18l from "@/assets/models/ZP18L.jpg";
+import zp208k from "@/assets/models/ZP208K.jpg";
+import zpem99xtv from "@/assets/models/ZPEM99XTV.jpg";
+import zp20x from "@/assets/models/ZP20X.jpg";
+import zp20y from "@/assets/models/ZP20Y.jpg";
 
 const Models = () => {
   const models = [
@@ -10,60 +15,72 @@ const Models = () => {
       subtitle: "FIRE-BOLT",
       power: "3000W",
       range: "Up to 240 KM",
-      description: "Wheel-motor electric motorcycle suitable for urban medium and long-distance use, delivery and passenger markets",
-      available: true 
+      description: "3000W wheel-motor electric motorcycle, with optional max range up to 240 KM — suitable for urban medium and long-distance use and commonly used in delivery and passenger markets",
+      available: true,
+      image: zp990c,
+      alt: "ZP990C FIRE-BOLT Electric Motorcycle - 3000W Power"
     },
     { 
       name: "ZP18L", 
       subtitle: "CITY X",
       power: "1500W",
       range: "Up to 75 KM",
-      description: "Ideal wheel-motor motorcycle for urban medium-distance use",
-      available: true 
+      description: "1500W wheel-motor motorcycle — ideal for urban medium-distance use",
+      available: true,
+      image: zp18l,
+      alt: "ZP18L CITY X Electric Motorcycle - 1500W Power"
     },
     { 
       name: "ZP208K", 
       subtitle: "Tricycle",
       power: "Utility",
       range: "Various",
-      description: "Utility model suited for cargo and commercial applications",
-      available: true 
+      description: "Tricycle / utility model suited for cargo and utility applications",
+      available: true,
+      image: zp208k,
+      alt: "ZP208K Electric Tricycle - Cargo and Utility Model"
     },
     { 
       name: "ZPEM99XTV", 
       subtitle: "Sports",
       power: "2000W",
       range: "Up to 180 KM",
-      description: "Performance-oriented sport-style model with LiFePO4 battery options",
-      available: true 
+      description: "Sport-style model in the EM99 family — performance-oriented with LiFePO4 battery options",
+      available: true,
+      image: zpem99xtv,
+      alt: "ZPEM99XTV Sports Electric Motorcycle - 2000W Performance"
     },
     { 
       name: "ZP20X", 
       subtitle: "CRUISER X",
       power: "2200W",
       range: "Up to 180 KM",
-      description: "Central-motor motorcycle suited for medium/long-distance and delivery",
-      available: true 
+      description: "2200W central-motor motorcycle; suited for medium/long-distance and delivery",
+      available: true,
+      image: zp20x,
+      alt: "ZP20X CRUISER X Electric Motorcycle - 2200W Power"
     },
     { 
       name: "ZP20Y", 
       subtitle: "Delivery Pro",
       power: "2000W",
       range: "Up to 180 KM",
-      description: "Central-motor model suitable for delivery and urban use",
-      available: true 
+      description: "2000W central-motor model suitable for delivery and urban use",
+      available: true,
+      image: zp20y,
+      alt: "ZP20Y Electric Motorcycle - 2000W Delivery Model"
     }
   ];
 
   return (
-    <section id="models" className="py-20 bg-background">
+    <section id="models" className="py-20 bg-background" aria-labelledby="models-heading">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Our Models
+          <h2 id="models-heading" className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Electric Motorcycle Models
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our complete range of electric motorcycles, all available with full spare parts support
+            Discover our complete range of ZP Motors electric motorcycles in Ethiopia, all available with full spare parts support
           </p>
         </div>
 
@@ -76,8 +93,8 @@ const Models = () => {
             >
               <div className="relative overflow-hidden bg-secondary/30 h-56">
                 <img 
-                  src={motorcycleDisplay} 
-                  alt={model.name}
+                  src={model.image} 
+                  alt={model.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {model.available && (
