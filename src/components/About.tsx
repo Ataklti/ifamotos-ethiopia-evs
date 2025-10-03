@@ -21,16 +21,17 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
+    <section id="about" className="py-20 bg-secondary">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             About IFA Motors
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            IFA Motors Plc is the leading importer and assembler of electric motorcycles in Ethiopia. 
-            In partnership with ZP Motors, we bring cutting-edge electric mobility solutions to the Ethiopian market, 
-            offering premium quality motorcycles with full spare parts support.
+            IFA Motors is a division of IFA Trading PLC, bringing sustainable transportation solutions to Ethiopia's growing urban centers. 
+            Through our exclusive partnership with ZP Motors, we import and assemble premium electric motorcycles designed for 
+            Ethiopian conditions. Our models range from efficient urban commuters to powerful delivery vehicles, all backed by 
+            comprehensive spare parts availability and technical support.
           </p>
         </div>
 

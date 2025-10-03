@@ -5,12 +5,54 @@ import motorcycleDisplay from "@/assets/motorcycle-display.jpg";
 
 const Models = () => {
   const models = [
-    { name: "ZP990C", type: "Commuter", available: true },
-    { name: "ZP18L", type: "Sport", available: true },
-    { name: "ZP208K", type: "Cruiser", available: true },
-    { name: "ZPEM99XTV", type: "Premium", available: true },
-    { name: "ZP20X", type: "Urban", available: true },
-    { name: "ZP20Y", type: "Adventure", available: true }
+    { 
+      name: "ZP990C", 
+      subtitle: "FIRE-BOLT",
+      power: "3000W",
+      range: "Up to 240 KM",
+      description: "Wheel-motor electric motorcycle suitable for urban medium and long-distance use, delivery and passenger markets",
+      available: true 
+    },
+    { 
+      name: "ZP18L", 
+      subtitle: "CITY X",
+      power: "1500W",
+      range: "Up to 75 KM",
+      description: "Ideal wheel-motor motorcycle for urban medium-distance use",
+      available: true 
+    },
+    { 
+      name: "ZP208K", 
+      subtitle: "Tricycle",
+      power: "Utility",
+      range: "Various",
+      description: "Utility model suited for cargo and commercial applications",
+      available: true 
+    },
+    { 
+      name: "ZPEM99XTV", 
+      subtitle: "Sports",
+      power: "2000W",
+      range: "Up to 180 KM",
+      description: "Performance-oriented sport-style model with LiFePO4 battery options",
+      available: true 
+    },
+    { 
+      name: "ZP20X", 
+      subtitle: "CRUISER X",
+      power: "2200W",
+      range: "Up to 180 KM",
+      description: "Central-motor motorcycle suited for medium/long-distance and delivery",
+      available: true 
+    },
+    { 
+      name: "ZP20Y", 
+      subtitle: "Delivery Pro",
+      power: "2000W",
+      range: "Up to 180 KM",
+      description: "Central-motor model suitable for delivery and urban use",
+      available: true 
+    }
   ];
 
   return (
@@ -46,12 +88,23 @@ const Models = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-foreground">{model.name}</h3>
-                <p className="text-muted-foreground mb-4">{model.type} Series</p>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold mb-1 text-foreground">{model.name}</h3>
+                  <p className="text-lg font-semibold text-primary mb-2">{model.subtitle}</p>
+                  <div className="flex gap-3 mb-3">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent">
+                      {model.power}
+                    </span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground">
+                      {model.range}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{model.description}</p>
+                </div>
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300"
                 >
-                  Learn More
+                  Request Details
                 </Button>
               </div>
             </Card>
